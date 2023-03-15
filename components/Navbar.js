@@ -30,10 +30,10 @@ const NavbarContainer = styled.div`
     align-items: center;
     height: 47px;
     position: fixed;
-    top: 94px;
+    top: 100px;
     right: 0;
     left: 0;
-    z-index: 999;
+    z-index: 998;
 `;
 const NavbarLinks = styled.div`
     display: flex;
