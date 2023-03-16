@@ -7,7 +7,7 @@ function Character({ character }) {
         <CharacterContainer>
             <Link href={`/id/${character.id}.json`}>
                 <div>
-                    <img src={character.image} alt={character.name} />
+                    <img src={character.image} alt={<>{character.name}</>} />
                 </div>
             </Link>
 

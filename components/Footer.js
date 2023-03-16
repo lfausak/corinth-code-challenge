@@ -7,35 +7,6 @@ function Footer() {
             <p>FOLLOW STAR WARS</p>
             <SocialLinks />
             <Copyright>TM & © Lucasfilm Ltd. All Rights Reserved</Copyright>
-            <FooterLinksContainer>
-                <div href="/" target="_blank">
-                    Terms of Use
-                </div>
-                <div href="/" target="_blank">
-                    Additional Content Information
-                </div>
-                <div href="/" target="_blank">
-                    Privacy Policy
-                </div>
-                <div href="/" target="_blank">
-                    Children's Online Privacy Policy
-                </div>
-                <div href="/" target="_blank">
-                    Your California Privacy Rights
-                </div>
-                <div href="/" target="_blank">
-                    Star Wars at shopDisney
-                </div>
-                <div href="/" target="_blank">
-                    Star Wars Helpdesk
-                </div>
-                <div href="/" target="_blank">
-                    Interest-Based Ads
-                </div>
-                <div href="/" target="_blank">
-                    Do Not Sell My Info
-                </div>
-            </FooterLinksContainer>
         </FooterContainer>
     );
 }
@@ -53,11 +24,16 @@ const FooterContainer = styled.div`
     background-position: center top;
     background-repeat: no-repeat;
     position: absolute;
+    width: 100%;
     :nth-of-type(1) {
         margin: 64px 0 22px;
         color: #ccc;
         font-size: 0.875rem;
         line-height: normal;
+    }
+    p {
+        margin-bottom: 20px;
+        font-weight: 200%;
     }
 `;
 const Copyright = styled.div`

@@ -34,8 +34,8 @@ function CharacterCard({ character }) {
                          (character?.diedLocation && "LOCATIONS") ||
                          (character?.homeworld && "LOCATIONS")}
                     </h4>
-                    {locations.filter(updateLocations).map((location) => (
-                        <p>{location !== "" && location}</p>
+                    {locations.filter(updateLocations).map((location, index) => (
+                        <p key={index}>{location !== "" && location}</p>
                     ))}
                     <h4>GENDER</h4>
                     <span>{character?.gender}</span>
@@ -45,7 +45,7 @@ function CharacterCard({ character }) {
                     <span>{character?.species}</span>
                     <h4>WIKI</h4>
                     <Link href={character?.wiki} target="_blank" rel="noreferrer">
-                        Read more about {character?.name}
+                        <p>Read more about {character?.name}</p>
                     </Link>
                 </CharacterInfo>
             </CardContainer>

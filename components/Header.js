@@ -28,11 +28,11 @@ function Header() {
 
     const info =
         showPersons.filter((person) =>
-            (value && person.name.toLowerCase().includes(value.toLowerCase()) && person.name.toLowerCase() !== value.toLowerCase()))
+            (value && person.name.toLowerCase().includes(value.toLowerCase())))
             .map(function (person) {
                 return (
-                    <Link href={`/id/${person.id}.json`}>
-                        <DropdownRow onClick={() => onSearch(person.name)} key={person.id}>{person.name}</DropdownRow>
+                    <Link href={`/id/${person.id}.json`} key={person.id}>
+                        <DropdownRow onClick={() => onSearch(person.name)}>{person.name}</DropdownRow>
                     </Link>
                 )
             }).slice(0, 15);
@@ -56,9 +56,6 @@ function Header() {
                     <input placeholder="Search Star Wars"
                         value={value} onChange={onChange}
                     />
-                    <HeaderActions1>
-                        <button onClick={() => onSearch(value)}>SEARCH</button>
-                    </HeaderActions1>
                 </HeaderSearch>
                 <Dropdown>
                     {info}
@@ -89,7 +86,7 @@ const HeaderContainer = styled.div`
         object-fit: contain;
         margin-top: -40px;
         margin-bottom: -20px;
-        height: 100px;
+        height: 150px;
         filter: brightness(0) invert(1);
     }
 
@@ -97,7 +94,6 @@ const HeaderContainer = styled.div`
 const HeaderLeft = styled.div``;
 const HeaderRight = styled.div``;
 const HeaderSearch = styled.div`
-    width: 26px;
     min-width: 26px;
     border-radius: 4px;
     background-color: #343434;
@@ -149,7 +145,7 @@ const HeaderActions1 = styled.div`
 
     button {
         background: transparent;
-        font-family: sans-serif;
+        font-family: inherit;
         color: #999;
         font-weight: 650;
         border: none;
@@ -237,4 +233,10 @@ const DropdownRow = styled.div`
         :hover {
             color: #9e4f60;
         }
+        padding: 8px;
+
+        text-decoration: none !important;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
     `;
+    

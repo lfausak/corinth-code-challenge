@@ -8,7 +8,7 @@ const Title = styled.h1`
     color: ${({ theme }) => theme.colors.primary};
 `
 
-export default function Characters({characters}) {
+export default function Characters({ characters, characterGet1 }) {
     const [value, setValue] = useState(12);
 
     const handleShowMore = () => {
@@ -42,17 +42,22 @@ export default function Characters({characters}) {
     );
 }
 export async function getStaticProps(context) {
-    const characterGet = await fetch("https://akabab.github.io/starwars-api/api/all.json"
+    const characterGet = await fetch("https://swapi.dev/api/people"//"https://akabab.github.io/starwars-api/api/all.json"
         //"https://swapi.dev/api/people"
-        ).then((res) => res.json());
-        //console.log(characterGet);
-        const characters = characterGet;
+    ).then((res) => res.json());
+    //console.log(characterGet);
+    const characterGet1 = characterGet.results;
+    const characters = await fetch("https://akabab.github.io/starwars-api/api/all.json"
+        //"https://swapi.dev/api/people"
+    ).then((res) => res.json());
     return {
         props: {
             characters,
+            characterGet1,
         },
     };
 }
+
 
 
 const HomeScreenContainer = styled.div``;
