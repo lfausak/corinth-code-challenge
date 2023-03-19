@@ -44,7 +44,7 @@ function CharacterCard({ character }) {
                     <h4>SPECIES</h4>
                     <span>{character?.species}</span>
                     <h4>WIKI</h4>
-                    <Link href={character?.wiki} target="_blank" rel="noreferrer">
+                    <Link style={{ textDecoration: 'none' }} href={character?.wiki} target="_blank" rel="noreferrer">
                         <p>Read more about {character?.name}</p>
                     </Link>
                 </CharacterInfo>
