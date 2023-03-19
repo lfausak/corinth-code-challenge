@@ -31,7 +31,7 @@ function Header() {
             (value && person.name.toLowerCase().includes(value.toLowerCase())))
             .map(function (person) {
                 return (
-                    <Link href={`/id/${person.id}.json`} key={person.id}>
+                    <Link style={{ textDecoration: 'none' }} href={`/id/${person.id}.json`} key={person.id}>
                         <DropdownRow onClick={() => onSearch(person.name)}>{person.name}</DropdownRow>
                     </Link>
                 )
