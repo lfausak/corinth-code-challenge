@@ -6,25 +6,25 @@ function Navbar() {
     return (
         <NavbarContainer>
             <NavbarLinks>
-                <Link href="https://www.starwarsnewsnet.com/">
+                <Link style={{ textDecoration: 'none' }} href="https://www.starwarsnewsnet.com/">
                 <NavbarLink title="NEWS + BLOG" />
                 </Link>
-                <Link href="https://www.movienewsnet.com/">
+                <Link style={{ textDecoration: 'none' }} href="https://www.movienewsnet.com/">
                 <NavbarLink title="VIDEO" />
                 </Link>
-                <Link href="https://en.wikipedia.org/wiki/List_of_Star_Wars_films">
+                <Link style={{ textDecoration: 'none' }} href="https://en.wikipedia.org/wiki/List_of_Star_Wars_films">
                 <NavbarLink title="FILMS" />
                 </Link>
-                <Link href="https://www.starwars.com/series/">
+                <Link style={{ textDecoration: 'none' }} href="https://www.starwars.com/series/">
                 <NavbarLink title="SERIES" />
                 </Link>
-                <Link href="https://www.starwars.com/games-apps">
+                <Link style={{ textDecoration: 'none' }} href="https://www.starwars.com/games-apps">
                 <NavbarLink title="INTERACTIVE" />
                 </Link>
-                <Link href="https://www.starwars.com/community">
+                <Link style={{ textDecoration: 'none' }} href="https://www.starwars.com/community">
                 <NavbarLink title="COMMUNITY" />
                 </Link>
-                <Link href="https://akabab.github.io/starwars-api/api/all.json">
+                <Link style={{ textDecoration: 'none' }} href="https://akabab.github.io/starwars-api/api/all.json">
                 <NavbarLink title="DATABANK" />
                 </Link>
 
